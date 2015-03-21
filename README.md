@@ -1,1 +1,2 @@
-#一个springMVC的Demo
+#A SpringMVC Demo
+For RESTful API
