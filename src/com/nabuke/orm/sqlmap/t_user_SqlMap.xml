@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="t_user" >
+	<resultMap id="BaseResultMap" class="com.nabuke.orm.entity.USER" >
+    	<result column="id" property="id" jdbcType="INTEGER" />
+    	<result column="username" property="username" jdbcType="VARCHAR" />
+    	<result column="password" property="password" jdbcType="VARCHAR" />
+    	<result column="roleid" property="roleid" jdbcType="INTEGER" />
+    	<result column="status" property="status" jdbcType="INTEGER" />
+  	</resultMap>
+	<sql id="Base_Column_List" >
+	    id, username, password,roleid,status
+	</sql>
+	<select id="selectUserById" resultMap="BaseResultMap" parameterClass="com.nabuke.orm.entity.USER" >
+	    select 
+	    <include refid="t_user.Base_Column_List" />
+	    from USER
+	    where id = #id:INTEGER#
+  	</select>
+</sqlMap>
