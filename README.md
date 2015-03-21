@@ -1,2 +1,3 @@
-
-#一个springMVC的Demo，服务器用Tomcat、数据库Mysql。
+#一个springMVC的Demo
+#服务器:Tomcat
+#数据库:Mysql
