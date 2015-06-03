@@ -29,10 +29,10 @@ public class Test {
 	@ResponseBody
 	@RequestMapping(value = "/mysqlconnect/{id}",method = {RequestMethod.POST,RequestMethod.OPTIONS})//, produces="application/json;charset=UTF-8"
 	public String mysqlconnect(@PathVariable Integer id,HttpServletRequest request,HttpServletResponse response) {//,@RequestParam(value = "username",required=false) String username
-		//response.setContentType("application/json");   
+	    //response.setContentType("application/json");   
 	    response.setHeader("Access-Control-Allow-Origin", "*");  
 	    response.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
-		response.setHeader("Access-Control-Max-Age", "3600");
+	    response.setHeader("Access-Control-Max-Age", "3600");
 	    response.setHeader("Access-Control-Allow-Headers", "X-Requested-With,Content-Type"); 
 	    String method = request.getMethod().toString();
 		System.out.println("method:"+method);
